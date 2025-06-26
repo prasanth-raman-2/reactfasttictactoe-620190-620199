@@ -101,4 +101,107 @@
     padding: 8px 16px;
     font-size: 12px;
   }
+
+  .tictactoe-board-container {
+    padding: 1rem 0.4rem 1rem 0.4rem !important;
+    max-width: 98vw !important;
+    min-width: 0 !important;
+  }
+  .ttt-board {
+    min-width: 98vw !important;
+    max-width: 98vw !important;
+    gap: 4px !important;
+  }
+  .ttt-cell {
+    font-size: 2rem !important;
+    min-width: 44px !important;
+    height: 44px !important;
+    border-radius: 8px !important;
+  }
+
+  .ttt-controls {
+    gap: 8px !important;
+  }
+}
+
+/* Tic Tac Toe custom styles */
+.tictactoe-board-container {
+  margin: 0 auto;
+  background: var(--bg-primary);
+  padding: 2rem 1.2rem 1.5rem 1.2rem;
+  border-radius: 20px;
+  box-shadow: 0px 4px 24px #0002;
+  max-width: 350px;
+}
+
+.ttt-board {
+  margin: 0 auto;
+  width: 100%;
+  min-width: 250px;
+  max-width: 350px;
+  aspect-ratio: 1/1;
+}
+
+.ttt-cell {
+  width: 100%;
+  height: 60px;
+  aspect-ratio: 1/1;
+  font-size: 2.4rem;
+  font-family: inherit;
+  font-weight: 900;
+  border: 2px solid #1e90ff;
+  background: #fff;
+  border-radius: 12px;
+  color: #1e90ff;
+  box-shadow: 0 1px 6px #0004;
+  cursor: pointer;
+  transition: background 0.16s, color 0.14s, box-shadow 0.14s;
+  user-select: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ttt-cell[disabled], .ttt-cell:disabled, .ttt-cell:read-only {
+  opacity: 0.67;
+  background: #eef2f7;
+  cursor: not-allowed;
+  color: #b2b5b9;
+  box-shadow: none;
+}
+
+.ttt-cell:active:not(:disabled) {
+  background: #f4f4fa;
+  box-shadow: 0 1px 2px #1e90ff18;
+}
+
+.ttt-controls {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 1.4rem 0 0 0;
+}
+
+.ttt-btn {
+  background: #ff4500;
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  padding: 0.63rem 1.46rem;
+  font-size: 17px;
+  font-weight: 700;
+  box-shadow: 0 2px 4px #ff450038;
+  cursor: pointer;
+  transition: opacity 0.12s;
+}
+.ttt-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+.ttt-loader {
+  font-size: 1.3rem;
+  color: #888;
+  text-align: center;
+  min-height: 52px;
+  letter-spacing: 2px;
 }
